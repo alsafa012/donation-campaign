@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Cards = ({ category }) => {
+
 
      const {
           id,
@@ -14,7 +17,8 @@ const Cards = ({ category }) => {
      } = category;
      return (
           <div>
-               <div className="card bg-base-100 shadow-xl">
+              <Link to={`/category/${id}`}>
+              <div className="card bg-base-100 shadow-xl">
                     <figure>
                          <img
                               src={picture}
@@ -35,6 +39,8 @@ const Cards = ({ category }) => {
                          </div> */}
                     </div>
                </div>
+              
+              </Link>
           </div>
      );
 };
