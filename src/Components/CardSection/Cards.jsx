@@ -18,7 +18,7 @@ const Cards = ({ category }) => {
                <Link to={`/category/${id}`}>
                     <div className="flex flex-col">
                          <figure>
-                              <img src={picture} alt="Categories" />
+                              <img className="w-full" src={picture} alt="Categories" />
                          </figure>
                          <div
                               className="flex flex-col px-3 py-3 space-y-3 rounded-b-md "
