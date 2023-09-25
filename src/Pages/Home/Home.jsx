@@ -5,7 +5,7 @@ import Banner from "../../Components/Header/Banner/Banner";
 const Home = () => {
 
      const category = useLoaderData()
-     console.log(category)
+     // console.log(category)
 
      return (
           <div>

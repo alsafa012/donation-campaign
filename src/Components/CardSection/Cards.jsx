@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 const Cards = ({ category }) => {
-
-
      const {
           id,
           title,
@@ -16,31 +14,34 @@ const Cards = ({ category }) => {
           category_name,
      } = category;
      return (
-          <div>
-              <Link to={`/category/${id}`}>
-              <div className="card bg-base-100 shadow-xl">
-                    <figure>
-                         <img
-                              src={picture}
-                              alt="Categories"
-                         />
-                    </figure>
-                    <div className="card-body">
-                         <h2 className="card-title text-sm font-medium">
-                              {category_name}
+          <div className="">
+               <Link to={`/category/${id}`}>
+                    <div className="flex flex-col">
+                         <figure>
+                              <img src={picture} alt="Categories" />
+                         </figure>
+                         <div
+                              className="flex flex-col px-3 py-3 space-y-3 rounded-b-md "
+                              style={{
+                                   background: card_bg,
+                                   color: text_button_bg,
+                              }}
+                         >
                               
-                         </h2>
-                         <p className="font-semibold text-xl">{title}</p>
-                         {/* <div className="card-actions justify-end">
-                              <div className="badge badge-outline">Fashion</div>
-                              <div className="badge badge-outline">
-                                   Products
-                              </div>
-                         </div> */}
+                              <p className="flex grow">
+                                   <span
+                                        className="text-sm font-medium rounded-md p-1"
+                                        style={{ backgroundColor: category_bg }}
+                                   >
+                                        {category_name}
+                                   </span>
+                              </p>
+                             
+                              <p className="h-[50px] w-full font-semibold text-xl">{title}</p>
+                          
+                         </div>
                     </div>
-               </div>
-              
-              </Link>
+               </Link>
           </div>
      );
 };
