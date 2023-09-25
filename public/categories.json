@@ -15,6 +15,7 @@
      {
           "id": "2",
           "picture": "https://i.ibb.co/LxMX7qQ/Education.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Better Food for Everyone",
           "category_name": "Education",
           "category_code": "02",
@@ -27,6 +28,7 @@
      {
           "id": "3",
           "picture": "https://i.ibb.co/Kjj6J29/Clothing.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": " Used Clothing Drive",
           "category_name": "Clothing",
           "category_code": "03",
@@ -39,6 +41,7 @@
      {
           "id": "4",
           "picture": "https://i.ibb.co/yf0P2Xk/Food.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Better Food for Everyone",
           "category_name": "Food",
           "category_code": "04",
@@ -51,6 +54,7 @@
      {
           "id": "5",
           "picture": "https://i.ibb.co/KK0ppRS/Health.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Wellness for Everyone",
           "category_name": "Health",
           "category_code": "01",
@@ -63,6 +67,7 @@
      {
           "id": "6",
           "picture": "https://i.ibb.co/LxMX7qQ/Education.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Investing in Lifelong Education",
           "category_name": "Education",
           "category_code": "02",
@@ -75,6 +80,7 @@
      {
           "id": "7",
           "picture": "https://i.ibb.co/Kjj6J29/Clothing.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Supporting Wardrobe Sustainability",
           "category_name": "Clothing",
           "category_code": "03",
@@ -87,6 +93,7 @@
      {
           "id": "8",
           "picture": "https://i.ibb.co/yf0P2Xk/Food.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Quality Food for Everyone",
           "category_name": "Food",
           "category_code": "04",
@@ -99,6 +106,7 @@
      {
           "id": "9",
           "picture": "https://i.ibb.co/KK0ppRS/Health.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "A Path to Greater Health",
           "category_name": "Health",
           "category_code": "01",
@@ -111,6 +119,7 @@
      {
           "id": "10",
           "picture": "https://i.ibb.co/LxMX7qQ/Education.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Education for All Ages",
           "category_name": "Education",
           "category_code": "02",
@@ -123,6 +132,7 @@
      {
           "id": "11",
           "picture": "https://i.ibb.co/Kjj6J29/Clothing.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": "Share the Warmth with Used Clothing",
           "category_name": "Clothing",
           "category_code": "03",
@@ -135,6 +145,7 @@
      {
           "id": "12",
           "picture": "https://i.ibb.co/yf0P2Xk/Food.png",
+          "banner_picture": "https://i.ibb.co/SyHSVXT/Rectangle-4284.png",
           "title": " A World of Better Food",
           "category_name": "Food",
           "category_code": "04",

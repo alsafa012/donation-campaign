@@ -4,6 +4,7 @@ import DonationPageCards from "../../Components/DonationPageDetails/DonationPage
 const Donation = () => {
      const [myDonation, setMyDonation] = useState([]);
      const [noDataFound, setNoDataFound] = useState(false);
+     const [dataLength, setDataLength] = useState(4);
 
      useEffect(() => {
           const myDonation = JSON.parse(localStorage.getItem("donation"));
@@ -14,25 +15,23 @@ const Donation = () => {
           }
      }, []);
 
-
      const handleRemoveAll = () => {
           localStorage.clear();
-          setMyDonation([])
+          setMyDonation([]);
           setNoDataFound("no data found");
-     }
+     };
+
+     // const handleSeeAllBtn=()=>{
+
+     // }
 
      return (
-          <div>
-                {myDonation.length > 0 && (
-                    <div className="text-center">
-                         <button onClick={handleRemoveAll}  className="btn">Remove All</button>
-                    </div>
-               )}
+          <div className="">
                {noDataFound ? (
                     <p className="text-center text-5xl">No Data</p>
                ) : (
                     <div className="container mx-auto my-5 md:mt-10 grid md:grid-cols-2 gap-5">
-                         {myDonation.map((item) => (
+                         {myDonation.slice(0, dataLength).map((item) => (
                               <DonationPageCards
                                    key={item.id}
                                    card={item}
@@ -40,11 +39,27 @@ const Donation = () => {
                          ))}
                     </div>
                )}
-               {/* {myDonation.length > 4 && (
-                    <div className="text-center">
-                         <button  className="btn">See All</button>
-                    </div>
-               )} */}
+               <div className="flex items-center gap-4 w-[300px] mx-auto text-center">
+                    {myDonation.length > 0 && (
+                         <div className="text-center">
+                              <button onClick={handleRemoveAll} className="btn bg-[#FF444A] text-white">
+                                   Remove All
+                              </button>
+                         </div>
+                    )}
+                    {myDonation.length > 4 && (
+                         <div className="text-center">
+                              <button
+                                   onClick={() =>
+                                        setDataLength(myDonation.length)
+                                   }
+                                   className="btn bg-[#009444] text-white"
+                              >
+                                   See All
+                              </button>
+                         </div>
+                    )}
+               </div>
           </div>
      );
 };
