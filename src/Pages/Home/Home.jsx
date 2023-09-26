@@ -6,7 +6,7 @@ const Home = () => {
      const category = useLoaderData();
      return (
           <div>
-               <Banner></Banner>
+               <Banner category={category}></Banner>
                <CardSection category={category}></CardSection>
           </div>
      );

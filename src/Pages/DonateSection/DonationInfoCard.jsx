@@ -17,7 +17,6 @@ const DonationInfoCard = ({ myCategory }) => {
      } = myCategory;
 
      const handleDonateBtn = () => {
-          console.log(myCategory);
           const addMyCategoryArray = [];
           const myDonation = JSON.parse(localStorage.getItem("donation"));
           if(!myDonation){

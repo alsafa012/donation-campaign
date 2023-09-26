@@ -16,7 +16,7 @@ const DonationPageCards = ({ card }) => {
 
      return (
           <div>
-               <div className="rounded-2xl card-sid bg-base-100 shadow-xl flex gap-3 md:gap-5 items-center">
+               <div style={{backgroundColor:card_bg , borderRadius:"16px"}} className=" bg-base-100 shadow-xl flex gap-3 md:gap-5 items-center">
                     
                     <img
                          className="rounded-l-2xl object-cover w-[150px] md:w-[200px] h-[150px] md:h-[170px]"
