@@ -13,18 +13,13 @@ const DonationPageCards = ({ card }) => {
           price,
           category_name,
      } = card;
-     console.log(card);
-     // const navigate = useNavigate()
-     // const handlePath =()=>{
-     //      navigate(`/category/${card.id}`);
-     // }
 
      return (
           <div>
                <div className="rounded-2xl card-sid bg-base-100 shadow-xl flex gap-3 md:gap-5 items-center">
                     
                     <img
-                         className="object-cover w-[150px] md:w-[200px] h-[150px] md:h-[170px]"
+                         className="rounded-l-2xl object-cover w-[150px] md:w-[200px] h-[150px] md:h-[170px]"
                          src={picture}
                          alt="Category"
                     />
@@ -48,7 +43,7 @@ const DonationPageCards = ({ card }) => {
                          <p className="font-semibold">${price}</p>
                          <div className="pt-2">
                               <button
-                              // onClick={handlePath}
+                              
                                    style={{
                                         backgroundColor: text_button_bg,
                                    }}

@@ -25,7 +25,7 @@ const DonationInfoCard = ({ myCategory }) => {
                localStorage.setItem("donation", JSON.stringify(addMyCategoryArray));
                Swal.fire(
                     'Good job!',
-                    'You clicked the button!',
+                    'Product added successfully...',
                     'success'
                   )
           }else{
@@ -35,15 +35,15 @@ const DonationInfoCard = ({ myCategory }) => {
                     localStorage.setItem('donation',JSON.stringify(addMyCategoryArray));
                     Swal.fire(
                          'Good job!',
-                         'You clicked the button!',
+                         'Product added successfully...',
                          'success'
                        )
                }else{
                     Swal.fire({
                          icon: 'error',
-                         title: 'Oops...',
-                         text: 'Something went wrong!',
-                         footer: '<a href="">Why do I have this issue?</a>'
+                         title: 'Already added',
+                         text: 'Cannot add multiple time...!',
+                        
                        })
                }
           }
@@ -56,7 +56,8 @@ const DonationInfoCard = ({ myCategory }) => {
                     <div className="mt-10">
                          <img
                               className="w-full h-[400px] object-cover"
-                              src={banner_picture}
+                              // src={banner_picture}
+                              src={picture}
                               alt=""
                          />
                     </div>

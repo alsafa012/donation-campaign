@@ -26,6 +26,7 @@ const myCreatedRouter = createBrowserRouter([
                {
                     path : "/statistics",
                     element:<Statistics></Statistics>,
+                    loader :()=>fetch("/categories.json"),
                },
                {
                     path: "/category/:categoryId",
