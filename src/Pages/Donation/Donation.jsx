@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DonationPageCards from "../../Components/DonationPageDetails/DonationPageCards";
+import { Link } from "react-router-dom";
 
 const Donation = () => {
      const [myDonation, setMyDonation] = useState([]);
@@ -21,14 +22,19 @@ const Donation = () => {
           setNoDataFound("no data found");
      };
 
-     // const handleSeeAllBtn=()=>{
-
-     // }
-
      return (
           <div className="">
                {noDataFound ? (
-                    <p className="text-center text-5xl">No Data</p>
+                    <div className="text-center mt-20">
+                         <p className=" text-2xl md:text-5xl font-semibold">
+                              You haven't made any donation yet..!
+                         </p>
+                         <Link to="/">
+                              <button className="mt-3 btn bg-[#FF444A] text-white">
+                                   Click here for donate
+                              </button>
+                         </Link>
+                    </div>
                ) : (
                     <div className="container mx-auto my-5 md:mt-10 grid md:grid-cols-2 gap-5">
                          {myDonation.slice(0, dataLength).map((item) => (
@@ -42,13 +48,20 @@ const Donation = () => {
                <div className="flex items-center gap-4 w-[300px] mx-auto text-center">
                     {myDonation.length > 0 && (
                          <div className="text-center">
-                              <button onClick={handleRemoveAll} className="btn bg-[#FF444A] text-white">
+                              <button
+                                   onClick={handleRemoveAll}
+                                   className="btn bg-[#FF444A] text-white"
+                              >
                                    Remove All
                               </button>
                          </div>
                     )}
                     {myDonation.length > 4 && (
-                         <div className="text-center">
+                         <div
+                              className={
+                                   dataLength === myDonation.length && "hidden"
+                              }
+                         >
                               <button
                                    onClick={() =>
                                         setDataLength(myDonation.length)

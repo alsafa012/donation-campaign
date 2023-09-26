@@ -4,9 +4,9 @@ import NavbarLogo from "./NavbarLogo";
 const Navbar = () => {
      return (
           <div>
-               <nav className="container mx-auto flex justify-between items-center md:text-lg font-medium md:font-bold">
+               <nav className="container mx-auto md:flex md:justify-between items-center text-lg font-bold">
                     <NavbarLogo></NavbarLogo>
-                    <div className="flex gap-2 md:gap-7">
+                    <div className="flex gap-2 md:gap-7 justify-center mt-3 md:mt-0">
                          <NavLink
                               to="/"
                               className={({ isActive, isPending }) =>

@@ -1,3 +1,5 @@
+// import { useNavigate } from "react-router-dom";
+
 const DonationPageCards = ({ card }) => {
      const {
           id,
@@ -12,6 +14,11 @@ const DonationPageCards = ({ card }) => {
           category_name,
      } = card;
      console.log(card);
+     // const navigate = useNavigate()
+     // const handlePath =()=>{
+     //      navigate(`/category/${card.id}`);
+     // }
+
      return (
           <div>
                <div className="rounded-2xl card-sid bg-base-100 shadow-xl flex gap-3 md:gap-5 items-center">
@@ -41,6 +48,7 @@ const DonationPageCards = ({ card }) => {
                          <p className="font-semibold">${price}</p>
                          <div className="pt-2">
                               <button
+                              // onClick={handlePath}
                                    style={{
                                         backgroundColor: text_button_bg,
                                    }}
