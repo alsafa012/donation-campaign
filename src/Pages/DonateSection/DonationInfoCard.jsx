@@ -54,7 +54,7 @@ const DonationInfoCard = ({ myCategory }) => {
                <div>
                     <div className="mt-10">
                          <img
-                              className="w-full h-[400px] object-cover"
+                              className="w-full h-[400px] object-fill "
                               // src={banner_picture}
                               src={picture}
                               alt=""

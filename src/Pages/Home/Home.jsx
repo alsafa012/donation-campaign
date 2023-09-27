@@ -4,6 +4,11 @@ import Banner from "../../Components/Header/Banner/Banner";
 
 const Home = () => {
      const category = useLoaderData();
+     
+
+
+
+
      return (
           <div>
                <Banner category={category}></Banner>

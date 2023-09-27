@@ -1,22 +1,29 @@
 import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 
 const Banner = ({ category }) => {
-     const [allCategory, setAllCategory] = useState([]);
-
+     console.log(category);
+     // const data = useLoaderData()
+     // console.log(data)
+     // const {id} = useParams()
+     // console.log(id)
+     const [allCategory, setAllCategory] = useState('');
+     console.log(allCategory)
      useEffect(() => {
           const myData = category.filter(item=>item.price)
           // console.log(item.id)
           setAllCategory(myData);
           // console.log(myData);
      }, [category]);
-     console.log(allCategory);
+     // console.log(allCategory);
 
      // console.log(category);
      //  const handleClickBtn = ()=>{
      //      console.log('hello world')
      const handleSubmit = (e) => {
           e.preventDefault();
-          console.log(e.target.name.value);
+          // console.log(e.target.name.value);
      };
      //  }
      return (

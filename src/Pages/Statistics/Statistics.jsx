@@ -11,27 +11,23 @@ const Statistics = () => {
           const myDonation = JSON.parse(localStorage.getItem("donation"));
           if (myDonation) {
                setMyDonation(myDonation);
-               setTotalDonation(
-                    data.reduce((total, item) => total + item.value, 0)
-               );
-
-               const total = myDonation.reduce(
-                    (preValue, currentValue) => preValue + currentValue.price,
-                    0
-               );
 
                const totaled = myDonation.length;
                const totalPercent = parseFloat(
                     ((totaled / 12) * 100).toFixed(2)
                );
+
                console.log("my donation ", totalPercent);
+
                const remainingDonations = Math.abs(totalPercent - 100);
+
                console.log("remaining donation ", remainingDonations);
+
                const myData = [
                     {
                          name: "Your Donation",
-                         value: totalDonation,
-                         
+                         value: totalPercent,
+
                          fill: "#00C49F",
                     },
                     {
@@ -40,14 +36,15 @@ const Statistics = () => {
                          fill: "#FF444A",
                     },
                ];
-               setTotalDonation(total);
-               setRemailingDonation(remainingDonations);
+               // setTotalDonation(total);
                setTotalDonation(totalPercent);
+               setRemailingDonation(remainingDonations);
                setData(myData);
           } else {
                setNoDataFound("no data found");
           }
-     }, [data, remainingDonation, totalDonation]);
+     }, []);
+
      return (
           <div>
                {noDataFound ? (
@@ -66,11 +63,7 @@ const Statistics = () => {
                     </div>
                ) : (
                     <div className="text-center ">
-                         <p> this is Statistics page</p>
-
-                         <p>total id: {myDonation.length}</p>
-                         <p>My Total donation: {totalDonation}%</p>
-                         <p>remainingDonation: {remainingDonation}%</p>
+                         <p>Pie Chart</p>
                          <div className=" flex justify-center">
                               <PieChart width={400} height={400}>
                                    <Pie
@@ -84,7 +77,6 @@ const Statistics = () => {
                                              ` ${(percent * 100).toFixed(2)}%`
                                         }
                                    />
-                                   <Tooltip />
                                    <Legend />
                               </PieChart>
                          </div>
