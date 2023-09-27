@@ -15,8 +15,8 @@ const Home = () => {
           if (search.length) {
                const filterCampaigns = allCategory.filter(
                     (campaign) =>
-                         campaign.category_name.toLowerCase() ===
-                         search.toLowerCase()
+                         campaign.category_name.toLowerCase().includes(search.toLowerCase())
+                         
                );
 
                if (filterCampaigns) {
