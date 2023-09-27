@@ -24,6 +24,7 @@ const Home = () => {
           } else {
                setSearchData(allCategory);
           }
+          document.getElementById("inputField").value=''
      };
 
      return (

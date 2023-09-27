@@ -6,10 +6,10 @@ const Banner = ({ handleClickBtn }) => {
                <div className="">
                     <div className="h-[50vh] md:h-[60vh] relative bg-[url('https://i.ibb.co/Wvc1LjN/Rectangle-4281.png')] bg-cover bg-no-repeat object-center md:object-fill opacity-5"></div>
                     <div className="absolute top-[30%] md:top-[35%] right-0 left-0 w-full mx-auto text-center">
-                         <h2 className="text-xl md:text-3xl lg:text-5xl font-bold">
+                         <h2 className="text-xl md:text-3xl lg:text-5xl font-extrabold">
                               I Grow By Helping People In Need
                          </h2>
-                         <div className="mt-2 md:mt-5">
+                         <div className="mt-4 md:mt-5">
                              
                               <input
                                    
