@@ -1,7 +1,7 @@
 # React + Vite
 
 This project is based on Donation Campaign.
-Some friendly features of my project written in below :
+Some useful features of my project written in below :
 
 -    In this project,there has a search option.People can get info by search according category name.
 -    In this project,there has a btn,by clicked this btn people can donate their donations.
