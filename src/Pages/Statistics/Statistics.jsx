@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { PieChart, Pie, Legend, Tooltip } from "recharts";
+import { PieChart, Pie, Legend } from "recharts";
 const Statistics = () => {
      const [myDonation, setMyDonation] = useState([]);
      const [totalDonation, setTotalDonation] = useState(0);
@@ -36,7 +36,7 @@ const Statistics = () => {
                          fill: "#FF444A",
                     },
                ];
-               // setTotalDonation(total);
+              
                setTotalDonation(totalPercent);
                setRemailingDonation(remainingDonations);
                setData(myData);
@@ -63,7 +63,6 @@ const Statistics = () => {
                     </div>
                ) : (
                     <div className="text-center ">
-                         <p>Pie Chart</p>
                          <div className=" flex justify-center">
                               <PieChart width={400} height={400}>
                                    <Pie

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Cards = ({ category }) => {
+     // console.log(category)
      const {
           id,
           title,
