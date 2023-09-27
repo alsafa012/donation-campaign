@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const Cards = ({ category }) => {
-     // console.log(category)
      const {
           id,
           title,
@@ -19,7 +18,11 @@ const Cards = ({ category }) => {
                <Link to={`/category/${id}`}>
                     <div className="flex flex-col">
                          <figure>
-                              <img className="w-full" src={picture} alt="Categories" />
+                              <img
+                                   className="w-full"
+                                   src={picture}
+                                   alt="Categories"
+                              />
                          </figure>
                          <div
                               className="flex flex-col px-3 py-3 space-y-3 rounded-b-md "
@@ -28,7 +31,6 @@ const Cards = ({ category }) => {
                                    color: text_button_bg,
                               }}
                          >
-                              
                               <p className="flex grow">
                                    <span
                                         className="text-sm font-medium rounded-md p-1"
@@ -37,9 +39,10 @@ const Cards = ({ category }) => {
                                         {category_name}
                                    </span>
                               </p>
-                             
-                              <p className="h-[50px] w-full font-semibold text-xl">{title}</p>
-                          
+
+                              <p className="h-[50px] w-full font-semibold text-xl">
+                                   {title}
+                              </p>
                          </div>
                     </div>
                </Link>

@@ -1,5 +1,3 @@
-
-
 const Banner = ({ handleClickBtn }) => {
      return (
           <div>
@@ -10,9 +8,7 @@ const Banner = ({ handleClickBtn }) => {
                               I Grow By Helping People In Need
                          </h2>
                          <div className="mt-4 md:mt-5">
-                             
                               <input
-                                   
                                    id="inputField"
                                    type="text"
                                    name="name"
@@ -23,10 +19,8 @@ const Banner = ({ handleClickBtn }) => {
                                    onClick={handleClickBtn}
                                    className="rounded-r-md absolute right-[20%] md:right-[35%] bg-[#FF444A] text-[#FFFFFF] font-semibold px-2 py-3 md:px-3 md:py-3"
                               >
-                                   {/* <button className="rounded-r-md absolute right-[20%] md:right-[35%] bg-[#FF444A] text-[#FFFFFF] font-semibold px-2 py-3 md:px-3 md:py-3"> */}
                                    Search
                               </button>
-                             
                          </div>
                     </div>
                </div>

@@ -17,17 +17,12 @@ const Statistics = () => {
                     ((totaled / 12) * 100).toFixed(2)
                );
 
-               console.log("my donation ", totalPercent);
-
                const remainingDonations = Math.abs(totalPercent - 100);
-
-               console.log("remaining donation ", remainingDonations);
 
                const myData = [
                     {
                          name: "Your Donation",
                          value: totalPercent,
-
                          fill: "#00C49F",
                     },
                     {
@@ -36,7 +31,7 @@ const Statistics = () => {
                          fill: "#FF444A",
                     },
                ];
-              
+
                setTotalDonation(totalPercent);
                setRemailingDonation(remainingDonations);
                setData(myData);

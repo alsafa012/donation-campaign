@@ -9,33 +9,30 @@ const Home = () => {
      const [allCategory, setAllCategory] = useState(category);
      const [searchData, setSearchData] = useState(category);
      const handleClickBtn = (e) => {
-          console.log("btn clicked");
           const search = document.getElementById("inputField").value;
           e.preventDefault();
-          console.log(search);
+
           if (search.length) {
                const filterCampaigns = allCategory.filter(
-                    (campaign) => campaign.category_name.toLowerCase() === search.toLowerCase()
+                    (campaign) =>
+                         campaign.category_name.toLowerCase() ===
+                         search.toLowerCase()
                );
-               console.log(filterCampaigns);
+
                if (filterCampaigns) {
                     setSearchData(filterCampaigns);
                }
           } else {
                setSearchData(allCategory);
           }
-          document.getElementById("inputField").value=''
+          document.getElementById("inputField").value = "";
      };
 
      return (
           <div>
                <Banner handleClickBtn={handleClickBtn}></Banner>
 
-
                <CardSection searchData={searchData}></CardSection>
-
-
-               {/* <CardSection category={category}></CardSection> */}
           </div>
      );
 };
