@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import DonationInfoCard from "./DonationInfoCard";
+// import DonationInfoCard from "./DonationInfoCard";
 
 const DonateSection = () => {
      const [myCategory, setMyCategory] = useState({});
