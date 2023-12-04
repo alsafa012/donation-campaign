@@ -8,21 +8,30 @@ const Home = () => {
 
      const [allCategory, setAllCategory] = useState(category);
      const [searchData, setSearchData] = useState(category);
+     const [noData, setNoData] = useState("");
+
      const handleClickBtn = (e) => {
           const search = document.getElementById("inputField").value;
           e.preventDefault();
 
           if (search.length) {
-               const filterCampaigns = allCategory.filter(
-                    (campaign) =>
-                         campaign.category_name.toLowerCase().includes(search.toLowerCase())
-                         
+               const filterCampaigns = allCategory.filter((campaign) =>
+                    campaign.category_name
+                         .toLowerCase()
+                         .includes(search.toLowerCase())
                );
 
-               if (filterCampaigns) {
+               // if (filterCampaigns) {
+               //      setSearchData(filterCampaigns);
+               // }
+               if (filterCampaigns.length === 0) {
+                    setNoData("no data found");
+               } else {
+                    setNoData("");
                     setSearchData(filterCampaigns);
                }
           } else {
+               setNoData("");
                setSearchData(allCategory);
           }
           document.getElementById("inputField").value = "";
@@ -31,8 +40,14 @@ const Home = () => {
      return (
           <div>
                <Banner handleClickBtn={handleClickBtn}></Banner>
-
-               <CardSection searchData={searchData}></CardSection>
+               {noData ? (
+                    <p className="text-2xl text-center mt-5 font-medium ">
+                         No data found
+                    </p>
+               ) : (
+                    <CardSection searchData={searchData}></CardSection>
+               )}
+               {/* <CardSection searchData={searchData}></CardSection> */}
           </div>
      );
 };
